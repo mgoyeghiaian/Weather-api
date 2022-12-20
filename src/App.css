@@ -1,38 +1,119 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+*{
+  font-family: 'Raleway', sans-serif;
+
+}
+body {
+  transition: background-color 1s ease-in;
+  background-color: #9ccef3;
+  margin: 0;
+}
+
+#input {
+  border: 0;
+  height: 40px;
+  width: 10%;
+  background-color:  #769edb;
+  font-size: large;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+input:focus {
+  outline: none !important;
+}
+input:hover {
+  border-style: none;
+}
+input::placeholder {
+  color: #fff;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:focus::placeholder {
+  color: transparent;
+  border-bottom: 1px solid #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+textarea:focus,
+input:focus {
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid #000000;
+}
+form {
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+header {
+  transition: background-color 1s ease-in;
+  color: white;
+  background-color: #769edb;
+  display: flex;
+  padding-bottom: 1%;
+  flex-direction: column;
+}
+
+
+header button {
+  padding:0.8rem 1.5rem 0.8rem 1.5rem ;
+  transition: background-color 1s ease-in;
+  margin-left: 3%;
+  background-color: #5878c8;
+  border: #6495ed; 
+}
+
+.mostlycloudy {
+  padding-left: 43%;
+  width: 15rem;
+}
+
+#btn{
+  font-weight: bold;
+}
+
+#hours {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8%;
+  font-weight: bold;
+}
+
+#hours img {
+  width: 80px;
+  height: 80px;
+}
+
+#hours p {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+#weather {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 3%;
+  font-weight: bold;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+#weather img {
+  width: 200px;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#weather h3{
+color: rgb(255, 255, 255);
+font-size: 25px;
+font-weight: bolder;
 }
+
+#weather h2 ,h4 {
+  color:#030348;
+}
+
+
+
