@@ -18,6 +18,16 @@ body {
   text-align: center;
 }
 
+.error{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.error img{
+  width: 200px;
+  height: 200px;
+}
 
 
 input:focus {
@@ -41,6 +51,7 @@ input:focus {
   color: rgb(255, 255, 255);
   border-bottom: 2px solid #000000;
 }
+
 form {
   margin-left: 2%;
   margin-top: 2%;
@@ -62,22 +73,19 @@ header button {
   margin-left: 3%;
   background-color: #5878c8;
   border: #6495ed; 
-}
-
-.mostlycloudy {
-  padding-left: 43%;
-  width: 15rem;
-}
-
-#btn{
   font-weight: bold;
+
 }
+
+
+
 
 #hours {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 8%;
+  margin-top: 7%;
   font-weight: bold;
+  padding-bottom: 2.5%;
 }
 
 #hours img {
@@ -116,4 +124,27 @@ font-weight: bolder;
 }
 
 
+@media only screen and (max-width: 600px) {
+  header button {
+  margin-left: 35%;
+  }
 
+  #input {
+  width: 30%;
+  }
+
+  #weather img {
+    width: 35%;
+  }
+
+ #hours {
+  margin-top: 25%;
+ }
+  #hours img{
+width: 80%;
+  }
+
+  #hours p{
+    font-size: medium;
+  }
+}

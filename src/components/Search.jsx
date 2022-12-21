@@ -1,16 +1,17 @@
 import React from "react";
 
-const Search = () => {
+const Search = ({ setCity, onClick, color }) => {
 
   return (
-    <header>
+    <header style={color[0]}>
       <form>
         <input
           placeholder="Enter a country"
           id="input"
+          onChange={(e) => setCity(e.target.value)}
 
         ></input>
-        <button id="btn" >
+        <button id="btn" onClick={(e) => onClick(e)}>
           FIND WEATHER
         </button>
       </form>

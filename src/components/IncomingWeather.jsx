@@ -1,55 +1,18 @@
 import React from "react";
-import cloudy from "../weather-icons/mostlycloudy.svg";
-import clear from "../weather-icons/clear.svg";
+import getImages from "./getImages"
 
-
-function IncomingWeather() {
+function IncomingWeather({ rem }) {
   return (
     <div id="hours">
-
-      <div>
-        <p className="time">03:00</p>
-        <img src={cloudy} alt="storm icon" />
-        <p>8°C</p>
-      </div>
-
-      <div>
-        <p className="time">06:00</p>
-        <img src={cloudy} alt="clear icon" />
-        <p>9°C</p>
-      </div>
-
-      <div>
-        <p className="time">09:00</p>
-        <img src={clear} alt="clear icon" />
-        <p>14°C</p>
-      </div>
-
-      <div>
-        <p className="time">12:00</p>
-        <img src={clear} alt="clear icon" />
-        <p>17°C</p>
-      </div>
-
-      <div>
-        <p className="time">15:00</p>
-        <img src={clear} alt="clear icon" />
-        <p>18°C</p>
-      </div>
-
-      <div>
-        <p className="time">18:00</p>
-        <img src={clear} alt="clear icon" />
-        <p>16°C</p>
-      </div>
-
-      <div>
-        <p className="time">21:00</p>
-        <img src={cloudy} alt="clear icon" />
-        <p>13°C</p>
-      </div>
-    </div >
-  )
+      {rem.splice(0, 7).map((item) => (
+        <div key={item.dt}>
+          <p id="time"> {item.dt_txt.substr(11, 5)} </p>
+          <img src={getImages(item.weather[0].id)} alt="icons" />
+          <p>{Math.round(item.main.temp - 273.15)}°C </p>
+        </div>
+      ))}
+    </div>
+  );
 }
 
-export default IncomingWeather
+export default IncomingWeather;
